@@ -6,10 +6,10 @@
 
 The screw jack works by reciprocating the handle, which rotates a rod to drive the nut, causing the lifting screw to rotate and raise or lower the lifting cup, thus achieving the lifting and pulling force. The jack uses a screw transmission to convert the rotational motion of the screw into linear motion, while also transmitting motion and power. The screw transmission has advantages such as a large transmission ratio, self-locking ability, compact structure, and high precision.
 
-| Design Parameter              | 数值 [单位] |
-| ----------------------------- | ----------- |
-| Maximum Lifting Capacity$Q$ | 20 [kN]     |
-| Maximum Lifting Distance$h$ | 120 [mm]    |
+| Design Parameter                | 数值 [单位] |
+| ------------------------------- | ----------- |
+| Maximum Lifting Capacity$Q$   | 20 [kN]     |
+| Maximum Lifting Distance $h$ | 120 [mm]    |
 
 The material selection and design of the jack need to meet functional requirements, economic considerations, and durability and reliability requirements.
 
@@ -71,88 +71,88 @@ $$
 
 where $\psi = \frac{H}{d_2}$ represents the ratio of nut height to middle diameter, and $\varphi = \frac{h}{P}$ represents the ratio of thread contact height to pitch. For trapezoidal threads, $\varphi = 0.5$, and since the nut is an integral nut, $\psi$ is generally between 1.2 and 2.5. In this case, we take $\psi = 1.8$.
 
-此处螺旋传动副的螺杆—螺母材料选择钢对青铜，考虑螺旋千斤顶的工作条件为低速、人力传动，许用压强$[p]=18\sim25MPa$，此处取中间值$[p]=20MPa$。 根据 1.1 中的载荷要求，载荷力为$Q=20kN$，代入计算得
+For the screw-nut pair made of steel and bronze, the permissible contact pressure is taken as $[p] = 20$ MPa. With a load of $Q = 20$ kN, we can calculate
 
 $$
 d_2\geq18.81mm
 $$
 
-根据国家标准《梯形螺纹 第 2 部分：直径与螺距系列》(GB/T 5796.2-2022)，优先选用第一系列，公称直径取 $d=28mm$。 根据《梯形螺纹 第 3 部分：基本尺寸》(GB/T 5796.3-2022)，螺纹中径为 $d_2=25.500mm$，螺距为 $P=5mm$，计算得螺母高度为 $H=\psi d_2=45.9mm$。考虑到螺纹间载荷实际分布不均匀，螺母螺纹圈数$Z$不应超过10，否则需要更换材料或增大直径，验算得$Z=\frac{H}{P}=9.18<10$，**满足要求**。
+Referring to the national standard "Trapezoidal Threads Part 2: Diameters and Pitch Series" (GB/T 5796.2-2022), the preferred nominal diameter is $d = 28$ mm. From the standard "Trapezoidal Threads Part 3: Basic Dimensions" (GB/T 5796.3-2022), the middle diameter of the thread is $d_2 = 25.5$ mm, and the pitch is $P = 5$ mm. The nut height is calculated as $H = \psi d_2 = 45.9$ mm. Since the load distribution on the threads is not uniform, the number of threads on the nut $Z$ should not exceed 10. The calculation yields $Z = \frac{H}{P} = 9.18 < 10$,  **meeting the requirements** .
 
-此时表面工作压力
+So the surface working pressure is calculated as
 
 $$
 p=\frac{Q}{\pi d_2 \varphi H}=10.88MPa<[p]=20MPa
 $$
 
-**满足要求**。单线螺纹导程 $S=P=5mm$，亦可以计算出螺纹牙根部宽度 $b=0.65P=3.25mm$ 和螺纹升角 $\lambda=\arctan\frac{S}{\pi d_2}=3.571^\circ$。
+**Meeting the requirements** . The single-thread lead is $S = P = 5$ mm. The root width of the thread is $b = 0.65P = 3.25$ mm, and the thread angle $\lambda = \arctan \frac{S}{\pi d_2} = 3.571^\circ$.
 
-此时有
+The detailed thread parameters are as follows
 
-| 公称直径 [mm] | 螺距 [mm] | 内/外螺纹中径$d_2=D_2$[mm] | 内螺纹大径$D_4$ [mm] | 外螺纹小径$d_3$[mm] | 内螺纹小径$D_1$[mm] | 螺纹牙根部宽度$b$ [mm] | 螺纹升角$\lambda$ | 牙形角$\alpha$ |
-| ------------- | --------- | ---------------------------- | ---------------------- | --------------------- | --------------------- | ------------------------ | ------------------- | ---------------- |
-| 28            | 5         | 25.500                       | 28.500                 | 22.500                | 23.000                | 3.25                     | 3.571°             | 30°             |
+| Nominal Diameter [mm] | Pitch [mm] | Internal/External Thread Middle Diameter$d_2=D_2$[mm] | Internal Thread Major Diameter$D_4$ [mm] | External Thread Minor Diameter$d_3$[mm] | Internal Thread Minor Diameter$D_1$[mm] | Thread Root Width$b$ [mm] | Lead Angle$\lambda$ | Thread Angle$\alpha$ |
+| --------------------- | ----------- | ------------------------------------------------------- | ------------------------------------------ | ----------------------------------------- | ----------------------------------------- | --------------------------- | --------------------- | ---------------------- |
+| 28                    | 5           | 25.500                                                  | 28.500                                     | 22.500                                    | 23.000                                    | 3.25                        | 3.571°               | 30°                   |
 
 ---
 
-### 自锁验算
+### Self-locking Check
 
-钢对青铜的摩擦系数 $\mu = 0.08 \sim 0.10$，取小值 $\mu = 0.08$，梯形螺纹的牙形角 $\alpha = 30^\circ$。
+The friction coefficient $\mu$ between steel and bronze is between 0.08 and 0.10. We take the lower value $\mu = 0.08$, and the thread angle $\alpha = 30^\circ$.
 
 $$
 \varphi_v=\arctan\frac{\mu}{\cos\beta}=\arctan\frac{\mu}{\cos\frac{\alpha}{2}}=4.735^\circ\\
-\lambda=3.571^\circ<\varphi_v
 $$
 
-故螺旋副**满足自锁条件**。
+Since $\lambda = 3.571^\circ < \varphi_v$, the screw pair  **meets the self-locking requirement** .
 
-### 螺杆结构设计
+### Screw Structure Design
 
-螺杆上端用于支承托杯$10$并在其中插装手柄$ 7$，因此需要加大直径。暂取 $D_S=2d = 56mm$，膨大部分长度取 $l_s = 1.5d=42mm$。
 
-手柄孔径 $d_k$ 的大小根据手柄直径$d_p$决定，$d_k \approx d_p + (0.5 \sim 1)mm$ ，取 $d_k = 22.5mm$ 。
+The upper end of the screw supports the lifting cup and installs the handle, so its diameter must be increased. Temporarily, we set $D_S = 2d = 56$ mm, and the length of the enlarged portion is $l_s = 1.5d = 42$ mm.
 
-为了便于切制螺纹，螺纹上端应设有退刀槽。退刀槽的直径 $d_c$ 应比螺杆小径 $D_1$ 约小 $0.2 \sim 0.5mm$ 。退刀槽的宽度可取为 $l_c = 1.5P \approx 8mm$ ，退刀槽直径 $d_c = 22mm$。
+The hole diameter $d_k$ for the handle is determined based on the handle's diameter $d_p$, with $d_k \approx d_p + (0.5 \sim 1) , \text{mm}$, and we set $d_k = 22.5$ mm.
 
-为了便于螺杆旋入螺母，螺杆下端应有倒角，在设计中倒角统一取$c2$。
+In order to facilitate the cutting of the thread, a tool relief slot is provided at the top of the thread. The diameter of the relief slot $d_c$ is about $0.2 \sim 0.5$ mm smaller than the screw diameter $D_1$. We take $d_c = 22$ mm. The width of the relief slot is set to $l_c = 1.5P \approx 8$ mm.
 
-考虑千斤顶最大升程、退刀槽宽度、真实螺母高度（在 3.2 中计算），螺杆等效长度
+To facilitate the screw insertion into the nut, the lower end of the screw has a chamfer, and the chamfer size is uniform, denoted as $c2$.
+
+Considering the maximum lifting height of the jack, the width of the relief slot, and the actual nut height, the equivalent length of the screw is
 
 $$
 l_B =h+l_c+H'= 178mm
 $$
 
-### 螺杆强度校核
+### Screw Strength Check
 
-受力较大的螺杆需要用第四强度理论进行强度计算，螺杆工作时承受轴向压力 $Q$ 和扭矩 $T$ 的作用，螺杆危险截面上既有压缩应力，又有切应力。螺杆受到的扭矩
+The screws subjected to larger forces need to be strength-checked using the fourth strength theory. While working, the screw bears axial pressure $Q$ and torque $T$, resulting in both compressive and shear stresses at the dangerous section of the screw. The torque acting on the screw is
 
 $$
 T = \frac{Qd_2\tan(\psi+\varphi_v)}{2}=29.21N\cdot m
 $$
 
-螺杆材料为$ 45 $号钢，安全系数为 $3\sim5$，取最大值$5$，许用应力 $[\sigma]= \sigma_s/5=71MPa$ ,
+The screw material is $45$ steel, with a safety factor of $3 \sim 5$, taking the maximum value of $5$. The allowable stress is $[\sigma] = \sigma_s / 5 = 71 MPa$
 
 $$
 \sigma = \sqrt{\sigma^2+3\tau^2}=\sqrt{\left(\frac{Q}{A}\right)^2 + 3\left(\frac{T}{W_T}\right)^2}
 $$
 
-其中，对于圆柱体螺杆$A=\frac{\pi d_3^2}{4}$,$W_T=\frac{\pi d_3^3}{16}=A\frac{d_3}{4}$。螺杆的内螺纹小径 $d_3 = 22.500mm$，代入计算得到 $\sigma = 55.15MPa<[\sigma]=71MPa$ ，故该螺杆**满足强度要求**。
+For a cylindrical screw, $A = \frac{\pi d_3^2}{4}$, $W_T = \frac{\pi d_3^3}{16} = A\frac{d_3}{4}$. The inner thread minor diameter of the screw is $d_3 = 22.500mm$, and by substituting this into the calculation, we get $\sigma = 55.15 MPa < [\sigma] = 71 MPa$. Therefore, this screw **meets the strength requirements** .
 
-### 稳定性校核
+### Stability Check
 
-对于长径比大的受压螺杆，当轴向负载 $Q$ 大于某一临界值时，螺杆就会突然发生侧曲而丧失其稳定性，存在临界载荷$Q_c$，螺杆的稳定性条件
+For screws with a large length-to-diameter ratio under compression, when the axial load $Q$ exceeds a certain critical value, the screw will suddenly buckle and lose stability. The critical load $Q_c$ exists, and the stability condition for the screw is
 
 $$
 \frac{Q_c}{Q}\geq S_s
 $$
 
-其中$S_s$为保证螺杆不失稳的最小安全系数，对于传力螺旋传动$S_s=3.5\sim 5.0$，取最大值$S_s=5$。根据材料力学，失稳时的临界载荷$Q$与螺杆的柔度$\lambda_s = \frac{\mu l}{i}$的值有关，式中$l$为螺杆承受压力的一段长度，$i$为螺杆危险截面的惯性半径，若危险截面可近似看做是直径为$d_3$（螺纹小径）的圆，则$i=\frac{d_3}{4}$，单位均为$mm$，$\mu$为螺杆的长度系数，对于螺旋千斤顶可视为一端固定一端自由，取$\mu=2$。
+where $S_s$ is the minimum safety factor to ensure the screw does not lose stability. For the power transmission screw, $S_s = 3.5 \sim 5.0$, taking the maximum value of $S_s = 5$. According to material mechanics, the critical load $Q$ for instability is related to the screw’s flexibility $\lambda_s = \frac{\mu l}{i}$, where $l$ is the length of the section of the screw under pressure, and $i$ is the radius of inertia of the screw's dangerous section. If the dangerous section is approximated as a circle with diameter $d_3$ (the thread minor diameter), then $i = \frac{d_3}{4}$, and all units are in $mm$. The length coefficient $\mu$ for the screw is $2$ (for a screw jack with one end fixed and one end free).
 
 $$
 \lambda_s = \frac{\mu l_B}{i}=63.29>40
 $$
 
-需要进行稳定性校核。当$40<\lambda_s<100$时，对于优质碳素钢，取
+Stability check is required. When $40 < \lambda_s < 100$, for high-quality carbon steel, we take
 
 $$
 Q_c = (461-2.568\lambda_s)\frac{\pi d_3^2}{4}=118.67kN
@@ -162,66 +162,72 @@ $$
 \frac{Q_c}{Q} =5.934>S_s=5
 $$
 
-故该螺杆**满足稳定性条件**。
+Thus, the screw **meets the stability condition**.
 
-### 挡圈设计
+### Retaining Ring Design
 
-为了防止工作时螺杆从螺母中脱出，在螺杆下端必须安置钢制挡圈 (GB/T 891-1986)，挡圈用十字槽沉头螺钉 (GB/T 819.1-2016) 固定在螺杆端部。
+To prevent the screw from coming out of the nut during operation, a steel retaining ring must be installed at the lower end of the screw (GB/T 891-1986). The retaining ring is fixed at the end of the screw with a cross-slot countersunk screw (GB/T 819.1-2016).
 
-由 GB891-86 查得，对于公称直径 $d = 28$ mm 的螺钉紧固轴端挡圈应选用的挡圈公称直径为 $D = 35 mm$，$H = 5 mm$，$L = 10 mm$，小径 $d = 6.6 mm$，$d_1 = 3.2mm$，$D_1 = 13mm$，$c = 1mm$，螺钉 $M6 \times 16$。
+According to GB891-86, for screws with a nominal diameter $d = 28$ mm, the nominal diameter of the retaining ring should be $D = 35$ mm, with $H = 5$ mm, $L = 10$ mm, a small diameter of $d = 6.6$ mm, $d_1 = 3.2$ mm, $D_1 = 13$ mm, and $c = 1$ mm. The screw is $M6 \times 16$.
 
-## 螺母设计与计算
+## Nut Design and Calculation
 
-### 螺母材料选取与结构设计
+### Material Selection and Structural Design of the Nut
 
-螺母的材料除了足够的强度，还需要与螺杆材料配合时摩擦系数小并耐磨。为适应重载低速传动，这里选用铸造铝青铜$\text{ZQAl9-4-4-2}$ ，查询得许用切应力 $[\tau] = 30\sim40MPa$ ，许用弯曲应力 $[\sigma_b] = 40\sim60MPa$。
+In addition to sufficient strength, the material of the nut should have a low friction coefficient and good wear resistance when paired with the screw. To suit heavy-load low-speed transmission, **cast aluminum bronze** $\text{ZQAl9-4-4-2}$ is chosen, with allowable shear stress $[\tau] = 30 \sim 40$ MPa and allowable bending stress $[\sigma_b] = 40 \sim 60$ MPa.
 
-### 确定螺纹旋合圈数与螺母高度
+### Determining the Number of Thread Engagements and Nut Height
 
-螺母高度 $H =\psi d_2= 45.9mm$，螺纹工作圈数
+The nut height is given by
+
+$$
+H =\psi d_2= 45.9mm
+$$
+
+The number of engaged threads is
 
 $$
 u=\frac{H}{P}=9.18
 $$
 
-考虑退刀槽的影响面设计螺母圈数（取整数）
+Considering the effect of the tool relief slot, the number of thread turns for the nut (rounded to an integer) is:
 
 $$
 u'=u+1=10.18\approx10
 $$
 
-此时螺母的实际高度
+The actual height of the nut is
 
 $$
 H'=u'P=50mm
 $$
 
-### 螺母螺牙强度校核
+### Nut Thread Strength Check
 
-螺纹牙多发生剪切和挤压破坏，一般螺母的强度低于螺杆，故只需要校核螺母螺纹牙强度。
+Thread failure often occurs due to shear or compression, and generally, the strength of the nut is lower than that of the screw. Therefore, only the strength of the nut threads needs to be checked.
 
-螺纹牙危险截面的剪切强度条件
+The shear strength condition for the dangerous section of the thread
 
 $$
 \tau = \frac{Q}{\pi D_4 b u'}\leq[\tau]
 $$
 
-螺纹牙危险界面弯曲强度条件
+The bending strength condition for the dangerous interface of the thread
 
 $$
 \sigma = \frac{6Ql}{\pi D_4 b^2 u'}\leq[\sigma_b]
 $$
 
-其中b为螺纹牙根部的厚度，对于梯形螺纹，$b = 0.65P = 3.25mm$，$l$ 为弯曲力臂，$ l = \frac{D-D_2}{2} =1.5mm$，内螺纹大径$D_4=28.5mm$。对于青铜材料，许用切应力 $[ \tau ] = 30\sim40MPa$，许用弯曲应力 $[ \sigma_b ] = 40\sim60MPa$，这里取小值，$ [ \tau ] = 30 \text{ MPa} $，$[\sigma_b]=40MPa$。代入数据计算
+where $b$ is the root thickness of the thread. For trapezoidal threads, $b = 0.65P = 3.25 , \text{mm}$, $l$ is the bending lever arm, and $l = \frac{D - D_2}{2} = 1.5 , \text{mm}$, with the internal thread major diameter $D_4 = 28.5 , \text{mm}$. For bronze materials, the allowable shear stress $[\tau] = 30 \sim 40$ MPa and the allowable bending stress $[\sigma_b] = 40 \sim 60$ MPa. We take the lower values: $[\tau] = 30 , \text{MPa}$ and $[\sigma_b] = 40 , \text{MPa}$. Substituting the values
 
 $$
 \tau=\frac{Q}{\pi D_4 b u'}=6.87MPa\leq[\tau]\\
 \sigma=\frac{6Ql}{\pi D_4 b^2u'}=19.03MPa\leq[\sigma_b]
 $$
 
-故螺母螺纹牙**满足强度要求**。
+Thus, the nut thread  **meets the strength requirements**.
 
-### 螺母外部尺寸设计与校核
+### External Dimension Design and Check for the Nut
 
 取螺母外径 $D_N = 50mm\approx1.8d$，螺母凸缘直径 $D_{N1}=65mm=1.3D_N$，螺母凸缘厚度 $a=22mm=0.4H'$。
 
