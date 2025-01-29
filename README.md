@@ -386,7 +386,7 @@ Choosing a suitable value, the base's maximum size is taken as $D_{B3} = 150 \te
 
 ## Assembly Drawing
 
-![img]()
+![Assembly Drawing](image/3.png "Assembly Drawing")
 
 ## References
 
