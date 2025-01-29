@@ -6,10 +6,10 @@
 
 The screw jack works by reciprocating the handle, which rotates a rod to drive the nut, causing the lifting screw to rotate and raise or lower the lifting cup, thus achieving the lifting and pulling force. The jack uses a screw transmission to convert the rotational motion of the screw into linear motion, while also transmitting motion and power. The screw transmission has advantages such as a large transmission ratio, self-locking ability, compact structure, and high precision.
 
-| Design Parameter                | 数值 [单位] |
-| ------------------------------- | ----------- |
-| Maximum Lifting Capacity$Q$   | 20 [kN]     |
-| Maximum Lifting Distance $h$ | 120 [mm]    |
+| Design Parameter              | 数值 [单位] |
+| ----------------------------- | ----------- |
+| Maximum Lifting Capacity$Q$ | 20 [kN]     |
+| Maximum Lifting Distance$h$ | 120 [mm]    |
 
 The material selection and design of the jack need to meet functional requirements, economic considerations, and durability and reliability requirements.
 
@@ -106,7 +106,6 @@ $$
 Since $\lambda = 3.571^\circ < \varphi_v$, the screw pair  **meets the self-locking requirement** .
 
 ### Screw Structure Design
-
 
 The upper end of the screw supports the lifting cup and installs the handle, so its diameter must be increased. Temporarily, we set $D_S = 2d = 56$ mm, and the length of the enlarged portion is $l_s = 1.5d = 42$ mm.
 
@@ -218,183 +217,180 @@ $$
 \sigma = \frac{6Ql}{\pi D_4 b^2 u'}\leq[\sigma_b]
 $$
 
-where $b$ is the root thickness of the thread. For trapezoidal threads, $b = 0.65P = 3.25 , \text{mm}$, $l$ is the bending lever arm, and $l = \frac{D - D_2}{2} = 1.5 , \text{mm}$, with the internal thread major diameter $D_4 = 28.5 , \text{mm}$. For bronze materials, the allowable shear stress $[\tau] = 30 \sim 40$ MPa and the allowable bending stress $[\sigma_b] = 40 \sim 60$ MPa. We take the lower values: $[\tau] = 30 , \text{MPa}$ and $[\sigma_b] = 40 , \text{MPa}$. Substituting the values
+where $b$ is the root thickness of the thread. For trapezoidal threads, $b = 0.65P = 3.25 \text{mm}$, $l$ is the bending lever arm, and $l = \frac{D - D_2}{2} = 1.5 \text{mm}$, with the internal thread major diameter $D_4 = 28.5 \text{mm}$. For bronze materials, the allowable shear stress $[\tau] = 30 \sim 40$ MPa and the allowable bending stress $[\sigma_b] = 40 \sim 60$ MPa. We take the lower values: $[\tau] = 30 \text{MPa}$ and $[\sigma_b] = 40 \text{MPa}$. Substituting the values
 
 $$
 \tau=\frac{Q}{\pi D_4 b u'}=6.87MPa\leq[\tau]\\
 \sigma=\frac{6Ql}{\pi D_4 b^2u'}=19.03MPa\leq[\sigma_b]
 $$
 
-Thus, the nut thread  **meets the strength requirements**.
+Thus, the nut thread **meets the strength requirements**.
 
 ### External Dimension Design and Check for the Nut
 
-取螺母外径 $D_N = 50mm\approx1.8d$，螺母凸缘直径 $D_{N1}=65mm=1.3D_N$，螺母凸缘厚度 $a=22mm=0.4H'$。
+The external diameter of the nut is chosen as $D_N = 50 \text{mm} \approx 1.8d$, and the flange diameter of the nut is $D_{N1} = 65 \text{mm} = 1.3D_N$, with the flange thickness $a = 22 \text{mm} = 0.4H'$.
 
-#### 拉扭组合校核
+#### Tensile and Torsion Combination Check
 
-螺母凸缘处受拉、扭组合作用，需要进行强度校核，由于数据信息少，扭转力矩大小难以精确计算，估算拉应力约为 $F = 35kN\cdot m\approx1.3Q$,
+The nut flange is subjected to both tensile and torsional forces, so a strength check is required. Due to limited data, it is difficult to calculate the torsional moment accurately, but the tensile stress is roughly estimated as $F = 35 \text{kN} \cdot \text{m} \approx 1.3Q$
 
 $$
 \sigma'=\frac{F}{0.25\pi(D_N^2-d^2)}<[\sigma]
 $$
 
-取许用拉应力 $[ \sigma ] = 40\text{MPa}$，计算得到
+Taking the allowable tensile stress $[\sigma] = 40 \text{MPa}$, the calculation gives
 
 $$
 \sigma' = 19.29 \text{ MPa} < [ \sigma ] = 40 \text{ MPa}
 $$
 
-，
+**Meets the strength requirements**.
 
-**满足强度要求**
+#### Compression Check for the Flange and Base Contact
 
-。
-
-#### 凸缘与底座挤压校核
-
-凸缘与底座接触部分存在挤压，需要进行挤压强度计算，
+There is compression at the contact between the flange and the base, requiring a compression strength calculation，
 
 $$
 \sigma_p=\frac{Q}{0.25\pi(D_{N1}^2-D_N^2)}<[\sigma_p]
 $$
 
-取许用挤压应力 $[ \sigma_p ] = 75\text{MPa}$，计算得到
+Taking the allowable compression stress $[\sigma_p] = 75 \text{MPa}$, the calculation gives
 
 $$
 \sigma_p' = 19.19 \text{ MPa} < [ \sigma_p ] = 75 \text{ MPa}
 $$
 
-，故可以认为/
+Therefore, it can be considered  **to meet the compression strength requirement**.
 
-**满足挤压强度要求**
+#### Bending Strength Check at the Flange Root
 
-。
-
-#### 凸缘根部强度计算
-
-凸缘根部需要进行弯曲强度计算，
+The bending strength at the flange root needs to be calculated，
 
 $$
 \sigma_b=\frac{Q(D_{N1}-D_N)}{\pi D_Na^2}<[\sigma_b]
 $$
 
-代入计算$\sigma_b'=3.95\text{MPa}<[\sigma_b]$，**满足弯曲强度要求**。
+Substituting values, we get $\sigma_b' = 3.95 \text{MPa} < [\sigma_b]$, which  **meets the bending strength requirement**.
 
-根据 $\text{GB/T 77-2007}$，这里使用内六角平端紧定螺钉 $\text{M12}$。
+According to  **GB/T 77-2007** , an internal hexagonal flat-head set screw **M12** is used here.
 
-## 托杯设计与计算
+## Lifting Cup Design and Calculation
 
-### 托杯材料选择与结构设计
+### Material Selection and Structural Design of the Lifting Cup
 
-托杯用于承托重物，可以用$\text{ Q235}$ 钢模锻制成，材料为$\text{ Q235}$。其结构尺寸见图。为了与重物接触良好并防止相对滑动，在杯托上表面制有切口的沟纹。为了防止杯托从螺杆端部脱落，在螺杆上端装有挡板。
+The lifting cup, which supports the heavy load, is made from $\text{Q235}$ steel using forging. The structure dimensions are shown in the diagram. To ensure good contact with the load and prevent relative movement, grooves are made on the upper surface of the cup. To prevent the lifting cup from falling off the screw end, a baffle is installed at the upper end of the screw.
 
-### 托杯尺寸设计与强度校核
+### Lifting Cup Dimension Design and Strength Check
 
-当螺杆转动时，杯托和重物不作相对转动。因此在起重时，杯托底部与螺杆和接触面有相对滑动。为了避免过快磨损，一方面需要润滑，另一方面还需要验算接触面间的压力强度。
+When the screw rotates, the lifting cup and the load do not rotate relative to each other. Therefore, during lifting, there is relative sliding between the bottom of the lifting cup and the screw and contact surface. To prevent rapid wear, lubrication is required, and the contact pressure between the surfaces needs to be checked.
 
 $$
 p=\frac{Q}{\frac{\pi}{4}(D_S'^2-D_S''^2)}\leq[p]
 $$
 
-其中，$[ p ]$ 为许用压强，应为杯托与螺杆材料许用压强的较小值，查表知$\text{Q235}$的许用压强较小，取 $[ p ] =[p]_\text{杯} =225$ MPa。
+where $[p]$ is the allowable contact pressure, taken as the smaller of the allowable pressures of the lifting cup and screw materials. According to the table, the allowable pressure for $\text{Q235}$ is smaller, so we take $[p] = [p]_\text{cup} = 225$ MPa.
 
-取杯托外径$D_S=58mm$，杯托直径$D_S'=D_S-(2\sim4)$，取$D_S'=54mm$，直径$D_S''=d+(1\sim2)$，取$D_S''=30mm$，代入公式
+Taking the outer diameter of the lifting cup as $D_S = 58 \text{mm}$, the inner diameter $D_S' = D_S - (2 \sim 4)$, we take $D_S' = 54 \text{mm}$, and the diameter $D_S'' = d + (1 \sim 2)$, we take $D_S'' = 30 \text{mm}$. Substituting into the formula
 
 $$
 p=\frac{Q}{\frac{\pi}{4}(D_S'^2-D_S''^2)}=12.63MPa\leq[p]=225MPa
 $$
 
-**满足强度要求**。
+**Meets the strength requirements**.
 
-杯托外口径$D_3=70\approx2.5dmm$。杯托厚度取$\delta=8mm$，杯底厚度为$\delta_b\approx1.5\delta=10mm$，沟纹宽度为$1.5\delta=12mm$，沟纹深度为$\delta_d=\delta/2=6mm$，杯托高度为$h_c\approx2d=60mm$，为保证杯托可以转动，螺杆顶部的垫片和杯托底部留有间隙，间隙值为$3\sim4mm$，因承受力不大，故取值为$3mm$。
+The outer diameter of the lifting cup is $D_3 = 70 \text{mm} \approx 2.5d$. The cup thickness is $\delta = 8 \text{mm}$, the bottom thickness is $\delta_b \approx 1.5\delta = 10 \text{mm}$, the groove width is $1.5\delta = 12 \text{mm}$, and the groove depth is $\delta_d = \frac{\delta}{2} = 6 \text{mm}$. The height of the lifting cup is $h_c \approx 2d = 60 \text{mm}$. To ensure the lifting cup can rotate, a gap of $3 \sim 4 \text{mm}$ is left between the spacer at the top of the screw and the bottom of the lifting cup. Since the load is not large, a value of $3 \text{mm}$ is taken.
 
-## 手柄设计与计算
+## Handle Design and Calculation
 
-### 手柄材料选择与结构设计
+### Handle Material Selection and Structural Design
 
-手柄的材料选择为常用的 45 号钢。其许用应力常取为 $[\sigma] = 160MPa$。将手柄插入螺杆上部的孔中，为防止手柄从孔中滑出，在手柄两端应加上手把，并用螺钉固定。
+The material selected for the handle is the commonly used  **45 steel** . Its allowable stress is typically taken as $[\sigma] = 160 \text{ MPa}$. The handle is inserted into the hole at the upper end of the screw, and to prevent the handle from slipping out of the hole, handles should be added at both ends and fixed with screws.
 
-### 确定手柄长度
+### Determining the Handle Length
 
-手柄上的工作转矩包括螺纹副摩擦力矩与接触面摩擦力矩
+The work torque on the handle includes both the friction torque of the screw pair and the friction torque on the contact surfaces
 
 $$
 T=F_HL_H=T_1+T_2
 $$
 
-螺旋副间的摩擦阻力矩
+The friction torque between the threads
 
 $$
 T_1 =Q\tan(\psi+\rho_v) \frac{d_2}{2}
 $$
 
-杯托与轴端支承面的摩擦力矩
+The friction torque at the cup support and shaft end bearing surface
 
 $$
 T_2 =Q\cdot \frac{1}{3}f_c \frac{D_0^3-d_0^3}{D_0^2-d_0^2}
 $$
 
-取 $D_0=D_s'=54mm$,$d_0=D_s''=30mm$，人手的最大操作力 $F_H = 300N$，给出$f_c=0.12$，代入可求得$T_1=29.21N$，$T_2=51.77N$手柄的有效长度
+Taking $D_0 = D_s' = 54 \text{mm}$, $d_0 = D_s'' = 30 \text{mm}$, and the maximum human operational force $F_H = 300 \text{N}$, with $f_c = 0.12$, we can calculate $T_1 = 29.21 \text{N}$ and $T_2 = 51.77 \text{N}$. The effective length of the handle is
 
 $$
 L_H=269.9mm
 $$
 
-取手柄长度为 $L_H = 271 mm$，该距离为螺杆中心到人手施力点的距离，考虑螺杆头部尺寸和人工握手距离，适当增加手柄实际长度。
+The handle length is taken as $L_H = 271 , \text{mm}$, which is the distance from the screw center to the point where the hand applies force. Considering the size of the screw head and the manual grip distance, the actual length of the handle is appropriately increased
 
 $$
 L_H'=L_H+\frac{D_S}{2}+50mm=350mm
 $$
 
-### 确定手柄直径
+### Determining the Handle Diameter
 
-Q235 的许用应力 $[\sigma] = 160$ MPa，可将手柄看作一个悬臂梁，按照弯曲强度确定手柄直径,
+The allowable stress of Q235 is $[\sigma] = 160 \text{MPa}$. The handle can be regarded as a cantilever beam, and its diameter is determined based on bending strength
 
 $$
 \sigma_b=\frac{F_HL_H}{W}=\frac{F_HL_H}{\frac{\pi}{32}d_k^3}\leq[\sigma_b]
 $$
 
-计算得到
+Solving for the diameter
 
 $$
 d_p\geq \sqrt[3]{\frac{32F_HL_H}{\pi[\sigma_b]}}=17.28mm
 $$
 
-可适当取大，取 $d_p = 22 mm$。
+Considering the manual grip, a suitable value is chosen as $d_p = 22 \text{mm}$.
 
-## 底座设计
+## Base Design
 
-底座材料常用铸铁$ HT150 $及$ HT200$，选用$ HT150$。铸件的壁厚取 $\delta = 10mm$，为防止裂纹和缩孔，对所有小于$120^\circ$的角取圆角$R2$。为了增加底座的稳定性，底部尺寸应大些，因此将其外形制成约$ 1:5 $的斜度。
+The material commonly used for the base is cast iron **HT150** or  **HT200** , and **HT150** is selected. The wall thickness of the casting is taken as $\delta = 10 \text{mm}$. To prevent cracks and shrinkage holes, all angles smaller than $120^\circ$ should have rounded corners $R2$. To increase the base's stability, the bottom dimensions should be larger, so the shape is designed with a slope of about $1:5$.
 
-底座高度考虑螺母高度，推程和一定的距离裕度，取$H = 180mm$，底座与螺母相套处直径为
+The base height, considering the nut height, stroke, and a certain distance margin, is taken as $H = 180 \text{mm}$. The diameter at the base's nut fit is
 
 $$
 D_{B1} = D_N = 50 \text{mm}
 $$
 
-按照斜度计算底座斜段下方直径：
+The diameter at the bottom of the base's sloped section is calculated as
 
 $$
 D_{B2} = D_{B1 }+ \frac{1}{5}(H-H_2) =102 \text{mm}
 $$
 
-应按照挤压强度计算底座最大尺寸$D_{B3}$，其中灰铸铁和混凝土的许用挤压应力 $[\sigma_p] = 4.5MPa$
+The base's maximum size $D_{B3}$ is calculated based on its extrusion strength. The allowable extrusion stress for gray cast iron and concrete is $[\sigma_p] = 4.5 \text{MPa}$
 
 $$
 \sigma_p=\frac{Q}{\frac{\pi}{4}(D_{B3}^2-D_{B2}^2)}\geq[\sigma_p]\\
+$$
+
+Solving for $D_{B3}$
+
+$$
 D_{B3}\geq\sqrt{\frac{4Q}{\pi[\sigma_p]}+D_{B2}^2}=126.7mm
 $$
 
-适当取大，取底座最大尺寸 $d_{B3}=150mm$。
+Choosing a suitable value, the base's maximum size is taken as $D_{B3} = 150 \text{mm}$.
 
-## 装配图绘制
+## Assembly Drawing
 
-见附页。
+![img]()
 
-## 参考资料
+## References
 
-1. 陈秀宁, 顾大强. 机械设计[M]. 第3版. 杭州: 浙江大学出版社，2018.
-2. 刘鸿文, 材料力学$\text{I}$[M]. 第6版. 北京: 高等教育出版社, 2017: 316.
+1. 陈秀宁, 顾大强. **Mechanical Design** [M]. 3rd Edition. Hangzhou: Zhejiang University Press, 2018.
+2. 刘鸿文, **Materials Mechanics I** [M]. 6th Edition. Beijing: Higher Education Press, 2017: 316.
 
-部分资料来源网络和机械设计有关国家标准。
+Some materials are sourced from online and national standards related to mechanical design.
